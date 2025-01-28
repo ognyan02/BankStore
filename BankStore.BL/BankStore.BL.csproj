@@ -24,9 +24,4 @@
     <ProjectReference Include="..\BankStore.DL\BankStore.DL.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Services\" />
-  </ItemGroup>
-
 </Project>
