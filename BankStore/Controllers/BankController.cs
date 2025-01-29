@@ -31,9 +31,9 @@ namespace BankStore.Controllers
 
         }
 
-        [ProducesResponseType(StatusCode.Status200Ok)]
-        [ProducesResponseType(StatusCode.Status4004NotFound)]
-        [ProducesResponseType(StatusCode.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [HttpGet("GetById")]
         public IActionResult GetById(string id)
         {

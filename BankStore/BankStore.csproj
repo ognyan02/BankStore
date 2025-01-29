@@ -28,8 +28,4 @@
     <ProjectReference Include="..\BankStore.BL\BankStore.BL.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Validators\" />
-  </ItemGroup>
-
 </Project>
