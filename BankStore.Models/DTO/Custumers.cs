@@ -1,4 +1,5 @@
-﻿namespace BankStore.Models.DTO
+﻿
+namespace BankStore.Models.DTO
 {
 
 

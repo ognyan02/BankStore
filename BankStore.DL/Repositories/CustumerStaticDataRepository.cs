@@ -7,17 +7,16 @@ namespace BankStore.DL.Repositories
     
     internal class CustumersStaticDataRepository : ICustumerRepository
     {
-        public List<StaticData.Custumers> GetAll()
+        public List<Custumers> GetAll()
         {
-            return StaticData.Custumers;
+            return StaticData.StaticData.Custumers;
         }
 
-        public StaticData.Custumers? GetById(string id)
+        public Custumers? GetById(string id)
         {
             if (string.IsNullOrEmpty(id)) return null;
 
-            return StaticData.Custumers
-               .FirstOrDefault(x => x.Id == id);
+            return StaticData.StaticData.Custumers.FirstOrDefault(x => x.Id == id);
         }
     }
 }
