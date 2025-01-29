@@ -16,9 +16,4 @@
     <ProjectReference Include="..\BankStore.Models\BankStore.Models.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="StaticData\" />
-    <Folder Include="Repositories\" />
-  </ItemGroup>
-
 </Project>
