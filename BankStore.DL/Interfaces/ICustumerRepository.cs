@@ -4,7 +4,7 @@ namespace BankStore.DL.Interfaces
 {
     public interface ICustumerRepository
     {
-        List<Custumers> GetAll();
-        Custumers? GetById(string id);
+        List<Customers> GetAll();
+        Customers? GetById(string id);
     }
 }

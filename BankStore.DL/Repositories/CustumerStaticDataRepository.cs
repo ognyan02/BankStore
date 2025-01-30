@@ -1,5 +1,4 @@
 ﻿using BankStore.DL.Interfaces;
-using BankStore.DL.StaticData;
 using BankStore.Models.DTO;
 
 namespace BankStore.DL.Repositories
@@ -7,12 +6,12 @@ namespace BankStore.DL.Repositories
     
     internal class CustumersStaticDataRepository : ICustumerRepository
     {
-        public List<Custumers> GetAll()
+        public List<Customers> GetAll()
         {
             return StaticData.StaticData.Custumers;
         }
 
-        public Custumers? GetById(string id)
+        public Customers? GetById(string id)
         {
             if (string.IsNullOrEmpty(id)) return null;
 
@@ -20,3 +19,5 @@ namespace BankStore.DL.Repositories
         }
     }
 }
+
+

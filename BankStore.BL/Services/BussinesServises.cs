@@ -30,7 +30,7 @@ namespace BankStore.BL.Services
                   Name = Bank.Name,
                   Nomer = Bank.Nomer
                 };
-                foreach (var custumersId in Bank.Custumers)
+                foreach (var custumersId in Bank.Customers)
                 {
                     var custumers = _custumerRepository.GetById(custumersId);
                     if (custumers == null) continue;

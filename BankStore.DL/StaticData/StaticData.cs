@@ -4,19 +4,19 @@ namespace BankStore.DL.StaticData
 {
     public static class StaticData
     {
-        public static List<Custumers> Custumers { get; set; } = new List<Custumers>()
+        public static List<Customers> Custumers { get; set; } = new List<Customers>()
         {
-         new Custumers()
+         new Customers()
         {
             Id= "1",
             Name = "Ivan Georgiev"
         },
-        new Custumers()
+        new Customers()
         {
             Id= "2",
             Name ="Georgi Ivanov"
         },
-        new Custumers()
+        new Customers()
         {
             Id = "3",
             Name= "Petur Petrov"

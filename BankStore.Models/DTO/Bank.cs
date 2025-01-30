@@ -6,7 +6,7 @@
         public string Name { get; set; } = string.Empty;
         public int Nomer { get; set; }
 
-        public List<string> Custumers { get; set; }
+        public List<string> Customers { get; set; }
         
     }
 }   

@@ -10,12 +10,12 @@ namespace BankStore.DL.Repositories.MongoDb
 {
     internal class CustumerMongoRepository : ICustumerRepository
     {
-        public List<Custumers> GetAll()
+        public List<Customers> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public Custumers? GetById(string id)
+        public Customers? GetById(string id)
         {
             throw new NotImplementedException();
         }

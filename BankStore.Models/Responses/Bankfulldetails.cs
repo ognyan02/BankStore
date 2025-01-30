@@ -7,7 +7,7 @@ namespace BankStore.Models.Responses
         public string Name { get; set; }=string.Empty;
         public int Nomer { get; set; }
         
-        public List<Custumers>Custumers { get; set; }=new List<Custumers>();
+        public List<Customers>Custumers { get; set; }=new List<Customers>();
        
     }
 }

@@ -53,11 +53,11 @@ namespace BankStore.BL.Services
                 _logger.LogError("custumer not found");
                 return;
             }
-            if (bank.Custumers == null)
+            if (bank.Customers == null)
             {
-                bank.Custumers = new List<string>();
+                bank.Customers = new List<string>();
             }
-            bank.Custumers.Add(custumerId);
+            bank.Customers.Add(custumerId);
             _bankRepository.Update(bank);
 
         }

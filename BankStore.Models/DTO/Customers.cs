@@ -3,7 +3,7 @@ namespace BankStore.Models.DTO
 {
 
 
-    public class Custumers
+    public class Customers
     {
         public string Id { get; set; }
         public string Name { get; set; }
