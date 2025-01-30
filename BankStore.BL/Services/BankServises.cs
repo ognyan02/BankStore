@@ -6,19 +6,16 @@ using System.Runtime.CompilerServices;
 
 namespace BankStore.BL.Services
 {
-    internal class BankServises : IBankservises
+    public class BankServises : IBankservises
     {
         private readonly IBankRepository _bankRepository;
         private readonly ICustumerRepository _custumerRepository;
         private readonly ILogger<BankServises> _logger;
 
-        public BankServises(
-            IBankRepository bankRepository, ICustumerRepository custumerRepository, ILogger<BankServises> logger)
+        public BankServises(IBankRepository object1, ILogger<BankServises> logger, ICustumerRepository object2)
         {
-            _bankRepository = bankRepository;
-            _custumerRepository = custumerRepository;
-            _logger = logger;
         }
+
         public void Add(Bank bank)
         {
             if (bank == null)
