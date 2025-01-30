@@ -8,11 +8,11 @@ namespace BankStore.BL
     {
         public static IServiceCollection
             RegisterServices(this IServiceCollection services)
-       {
+        {
             return services
                          .AddSingleton<IBankservises, BankServises>()
-                         .AddSingleton<IBussinesservises, BussinesServises>();   
-       }
+                         .AddSingleton<IBussinesservises, BussinesServises>();
+        }
 
     }
 }

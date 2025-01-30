@@ -28,22 +28,22 @@ namespace BankStore.DL.StaticData
             new Bank()
             {
                 Id = "1",
-                Name = "Ivan Ivanov",
-                Nomer = 1,
+                Name = "UnicreditBulbank",
+                Nomer = 10,
                 
             },
             new Bank()
             {
                 Id = "2",
-                Name = "Kiril Petrov",
-                Nomer = 2,
+                Name = "OBB",
+                Nomer = 20,
                 
             },
             new Bank()
             {
                 Id = "3",
-                Name = "Ludmil Ivanov",
-                Nomer = 3,
+                Name = "DSK",
+                Nomer = 33,
                 
             }
        

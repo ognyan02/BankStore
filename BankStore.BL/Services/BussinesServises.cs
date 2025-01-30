@@ -5,7 +5,7 @@ using BankStore.Models.Responses;
 
 namespace BankStore.BL.Services
 {
-    internal class BussinesServises : IBussinesservises
+    public class BussinesServises : IBussinesservises
     {
        
         private IBankRepository _bankRepository;
