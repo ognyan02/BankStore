@@ -6,35 +6,43 @@ using BankStore.BL.Interfaces;
 using BankStore.DL;
 using BankStore.Models.Configurations;
 using BankStore.Validators;
+using BankStore.DL.Interfaces;
+using BankStore.DL.Repositories.MongoDb;
+
 
 namespace BankStore
 {
-
-public class Program
-    {   public static void Main(string[] args)
+    public class Program
+    {
+        public static void Main(string[] args)
         {
-            var bilder = WebApplication.CreateBuilder(args);
-            //Add configuration
-            bilder.Services.Configure<MongoDBConfiguration>(
-                bilder.Configuration
+            var builder = WebApplication.CreateBuilder(args);
+
+            //Add configurations
+            builder.Services.Configure<MongoDBConfiguration>(
+                builder.Configuration
                 .GetSection(nameof(MongoDBConfiguration)));
-            //Add service to the container
-            bilder.Services
+
+
+            //Add services to the container.
+            builder.Services
                 .RegisterRepositoies()
                 .RegisterServices();
-            bilder.Services.AddMapster();
 
-            bilder.Services.AddControllers();
+            builder.Services.AddMapster();
 
-            bilder.Services.AddValidatorsFromAssemblyContaining<TestValidator>();
+            builder.Services.AddControllers();
 
-            bilder.Services.AddFluentValidationAutoValidation();
+            builder.Services.AddValidatorsFromAssemblyContaining<TestValidator>();
 
-            bilder.Services.AddSwaggerGen();
+            builder.Services.AddFluentValidationAutoValidation();
 
-            bilder.Services.AddHealthChecks();
+            builder.Services.AddSwaggerGen();
 
-            var app = bilder.Build();
+            builder.Services.AddHealthChecks();
+
+            var app = builder.Build();
+
             app.MapHealthChecks("/healthz");
 
             if (app.Environment.IsDevelopment())
@@ -42,15 +50,15 @@ public class Program
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-            //Configure the HTTP request pipeline
+
+            //Configure the HTTP request pipeline.
 
             app.UseAuthorization();
 
             app.MapControllers();
 
             app.Run();
-        }
-       
-    }
 
+        }
+    }
 }

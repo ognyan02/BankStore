@@ -11,8 +11,8 @@ namespace BankStore.DL
             RegisterRepositoies(this IServiceCollection services)
         {
             return services
-                .AddSingleton<IBankRepository>()
-                .AddSingleton<ICustumerRepository>();
+                .AddSingleton<IBankRepository,BankMongoRepository>()
+                .AddSingleton<ICustumerRepository,CustumerMongoRepository>();
 
         }
     }
